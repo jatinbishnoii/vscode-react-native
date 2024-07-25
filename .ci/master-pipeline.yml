@@ -2,7 +2,7 @@ steps:
 - task: AzureCLI@2
   displayName: 'Get AzDO User ID'
   inputs:
-    azureSubscription: 'VS Web Diagnotics Subscription'
+    azureSubscription: 'VS Web Diagnostics Subscription'
     scriptType: pscore
     scriptLocation: inlineScript
     inlineScript: |
