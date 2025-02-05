@@ -39,8 +39,15 @@ extends:
                   Contents: |
                     *.vsix
                   TargetFolder: "$(Build.ArtifactStagingDirectory)"
+              - task: AzureKeyVault@2
+                displayName: "Get extension published PAT"
+                inputs:
+                  azureSubscription: 'VS Web Diagnostics Subscription'
+                  KeyVaultName: 'vs-webdiag-vscode-extns'
+                  SecretsFilter: 'extension-publish-vswdbot-PAT'
+                  RunAsPreJob: false
               - bash: |
                   VSIX=`ls *.vsix`
-                  vsce publish --pat $(extension-publish-vswdbot-PAT) --packagePath $VSIX
+                  vsce publish --pat $(SECRET_NAME) --packagePath $VSIX
                 displayName: "VSCE publish"
                 condition: and(succeeded(), eq(variables['dryrun'], 'false'))
