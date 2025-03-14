@@ -2,13 +2,24 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Debug Windows Hermes",
+            "request": "launch",
+            "type": "reactnativedirect",
+            "cwd": "${workspaceFolder}",
+            "platform": "windows"
+        },
+        {
             "name": "Launch Extension",
             "type": "extensionHost",
             "request": "launch",
             "runtimeExecutable": "${execPath}",
-            "args": ["--extensionDevelopmentPath=${workspaceRoot}"],
+            "args": [
+                "--extensionDevelopmentPath=${workspaceRoot}"
+            ],
             "sourceMaps": true,
-            "outFiles": ["${workspaceRoot}/src/**/*.js"],
+            "outFiles": [
+                "${workspaceRoot}/src/**/*.js"
+            ],
             "preLaunchTask": "gulp: build"
         },
         {
@@ -16,9 +27,13 @@
             "type": "extensionHost",
             "request": "launch",
             "runtimeExecutable": "${execPath}",
-            "args": ["--extensionDevelopmentPath=${workspaceRoot}"],
+            "args": [
+                "--extensionDevelopmentPath=${workspaceRoot}"
+            ],
             "sourceMaps": true,
-            "outFiles": ["${workspaceRoot}/src/**/*.js"]
+            "outFiles": [
+                "${workspaceRoot}/src/**/*.js"
+            ]
         },
         {
             "name": "Launch Extension tests",
@@ -31,7 +46,9 @@
             ],
             "stopOnEntry": false,
             "sourceMaps": true,
-            "outFiles": ["${workspaceRoot}/src/**/*.js"],
+            "outFiles": [
+                "${workspaceRoot}/src/**/*.js"
+            ],
             "preLaunchTask": "gulp: build"
         },
         {
@@ -46,7 +63,9 @@
             ],
             "stopOnEntry": false,
             "sourceMaps": true,
-            "outFiles": ["${workspaceRoot}/src/**/*.js"],
+            "outFiles": [
+                "${workspaceRoot}/src/**/*.js"
+            ],
             "preLaunchTask": "gulp: build"
         },
         {
@@ -56,10 +75,14 @@
             "protocol": "inspector",
             "program": "${workspaceFolder}/test/smoke/vscode/test/smoke/node_modules/mocha/bin/_mocha",
             "cwd": "${workspaceFolder}/test/smoke/vscode/test/smoke",
-            "args": ["--dont-delete-vsix"],
+            "args": [
+                "--dont-delete-vsix"
+            ],
             "timeout": 240000,
             "stopOnEntry": false,
-            "outFiles": ["${workspaceRoot}/src/**/*.js"],
+            "outFiles": [
+                "${workspaceRoot}/src/**/*.js"
+            ],
             "sourceMaps": true,
             "preLaunchTask": "Prepare Smoke Tests"
         },
@@ -70,10 +93,15 @@
             "protocol": "inspector",
             "program": "${workspaceFolder}/test/smoke/vscode/test/smoke/node_modules/mocha/bin/_mocha",
             "cwd": "${workspaceFolder}/test/smoke/vscode/test/smoke",
-            "args": ["--dont-delete-vsix", "--android"],
+            "args": [
+                "--dont-delete-vsix",
+                "--android"
+            ],
             "timeout": 240000,
             "stopOnEntry": false,
-            "outFiles": ["${workspaceRoot}/src/**/*.js"],
+            "outFiles": [
+                "${workspaceRoot}/src/**/*.js"
+            ],
             "sourceMaps": true,
             "preLaunchTask": "Prepare Smoke Tests"
         },
@@ -84,10 +112,15 @@
             "protocol": "inspector",
             "program": "${workspaceFolder}/test/smoke/vscode/test/smoke/node_modules/mocha/bin/_mocha",
             "cwd": "${workspaceFolder}/test/smoke/vscode/test/smoke",
-            "args": ["--dont-delete-vsix", "--ios"],
+            "args": [
+                "--dont-delete-vsix",
+                "--ios"
+            ],
             "timeout": 240000,
             "stopOnEntry": false,
-            "outFiles": ["${workspaceRoot}/src/**/*.js"],
+            "outFiles": [
+                "${workspaceRoot}/src/**/*.js"
+            ],
             "sourceMaps": true,
             "preLaunchTask": "Prepare Smoke Tests"
         },
@@ -98,10 +131,15 @@
             "protocol": "inspector",
             "program": "${workspaceFolder}/test/smoke/vscode/test/smoke/node_modules/mocha/bin/_mocha",
             "cwd": "${workspaceFolder}/test/smoke/vscode/test/smoke",
-            "args": ["--dont-delete-vsix", "--skip-setup"],
+            "args": [
+                "--dont-delete-vsix",
+                "--skip-setup"
+            ],
             "timeout": 240000,
             "stopOnEntry": false,
-            "outFiles": ["${workspaceRoot}/src/**/*.js"],
+            "outFiles": [
+                "${workspaceRoot}/src/**/*.js"
+            ],
             "sourceMaps": true,
             "preLaunchTask": "Build Smoke Tests"
         },
@@ -112,10 +150,16 @@
             "protocol": "inspector",
             "program": "${workspaceFolder}/test/smoke/vscode/test/smoke/node_modules/mocha/bin/_mocha",
             "cwd": "${workspaceFolder}/test/smoke/vscode/test/smoke",
-            "args": ["--dont-delete-vsix", "--skip-setup", "--android"],
+            "args": [
+                "--dont-delete-vsix",
+                "--skip-setup",
+                "--android"
+            ],
             "timeout": 240000,
             "stopOnEntry": false,
-            "outFiles": ["${workspaceRoot}/src/**/*.js"],
+            "outFiles": [
+                "${workspaceRoot}/src/**/*.js"
+            ],
             "sourceMaps": true,
             "preLaunchTask": "Build Smoke Tests"
         },
@@ -126,10 +170,16 @@
             "protocol": "inspector",
             "program": "${workspaceFolder}/test/smoke/vscode/test/smoke/node_modules/mocha/bin/_mocha",
             "cwd": "${workspaceFolder}/test/smoke/vscode/test/smoke",
-            "args": ["--dont-delete-vsix", "--skip-setup", "--ios"],
+            "args": [
+                "--dont-delete-vsix",
+                "--skip-setup",
+                "--ios"
+            ],
             "timeout": 240000,
             "stopOnEntry": false,
-            "outFiles": ["${workspaceRoot}/src/**/*.js"],
+            "outFiles": [
+                "${workspaceRoot}/src/**/*.js"
+            ],
             "sourceMaps": true,
             "preLaunchTask": "Build Smoke Tests"
         }
